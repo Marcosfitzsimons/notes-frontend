@@ -57,7 +57,6 @@ const Login = () => {
     }
   };
 
-  // asd
   useEffect(() => {
     if (user) {
       navigate("/");
