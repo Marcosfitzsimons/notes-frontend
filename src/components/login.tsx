@@ -16,7 +16,7 @@ import { loginSchema } from "@/validations/validations";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Icons } from "./icons";
-import loginService from "@/services/loginService";
+import axios from "@/api/axios";
 
 type FormData = z.infer<typeof loginSchema>;
 
@@ -41,7 +41,12 @@ const Login = () => {
     setIsLoading(true);
     setErr("");
     try {
-      const { token, details } = await loginService.login(data);
+      const {
+        data: { token, details },
+      } = await axios.post(`/auth/login`, data, {
+        headers: { "Content-Type": "application/json" },
+        withCredentials: true,
+      });
       setIsLoading(false);
       setAuth({ user: details, token });
       navigate("/");
