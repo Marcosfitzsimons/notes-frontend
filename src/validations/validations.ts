@@ -14,13 +14,13 @@ export const loginSchema = z.object({
 });
 
 export const notePostSchema = z.object({
-  title: z.string().max(15, {
-    message: "Title must be at most 15 characters.",
+  title: z.string().max(25, {
+    message: "Title must be at most 25 characters.",
   }).refine(data => data.length > 0, {
     message: "Title is required.",
   }),
-  content: z.string().max(50, {
-    message: "Content must be at most 50 characters.",
+  content: z.string().max(150, {
+    message: "Content must be at most 150 characters.",
   }).refine(data => data.length > 0, {
     message: "Content is required.",
   }),
