@@ -1,23 +1,23 @@
-Prerequisites
+### Prerequisites
 
     Node.js (>= 18.17)
     npm (>= 8.55.0)
 
-Runtimes, Engines, and Tools
+### Frotend - Runtimes, Engines, and Tools
 
     TypeScript (>= 5.2.2)
     Vite (>= 5.0.8)
 
-Running Locally
+### Running Locally
 
-    Install dependencies using npm:
+Install dependencies using npm:
 
-npm install
+    npm install
 
-    Copy .env.example to .env
+Copy .env.example to .env
 
-cp .env.example .env.local
+    cp .env.example .env
 
-    Start the development server:
+### Start the development server
 
-npm run dev
+    npm run dev
